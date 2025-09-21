@@ -1,0 +1,378 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tridoshhar Ayurveda - Natural Healing</title>
+
+    <!-- Link to external CSS file (keep HTML & CSS separate) -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== Navigation Bar ===== -->
+    <!-- This is the top navbar. It uses anchor links to scroll to sections. -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo"> Tridoshhar Ayurveda</div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">product</a></li>
+                
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#why">why choose us?</a></li>
+            </ul>
+            <!-- Mobile menu button (simple) -->
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- ===== Hero Section (Top Slideshow) ===== -->
+    <!-- Add your top images here. 4 images rotate automatically. -->
+    <header id="home" class="hero">
+        <div class="slideshow">
+            <div class="hero-slide active">
+                <img src="https://picsum.photos/id/1015/1400/600" alt="Ayurveda 1">
+                <div class="hero-text">
+                    <h1>Ancient Healing, Modern Care</h1>
+                    <p>Natural, pure and effective Ayurvedic remedies for daily wellness.</p>
+                    <!-- Button goes to products -->
+                    <a class="btn" href="#products">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="https://picsum.photos/id/1025/1400/600" alt="Ayurveda 2">
+                <div class="hero-text">
+                    <h1>Herbs From Nature</h1>
+                    <p>Handpicked herbs & traditional formulations.</p>
+                    <a class="btn" href="#about">Learn More</a>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="https://picsum.photos/id/1035/1400/600" alt="Ayurveda 3">
+                <div class="hero-text">
+                    <h1>Care That Cares</h1>
+                    <p>Holistic approach to improve body & mind.</p>
+                    <a class="btn" href="#contact">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="https://picsum.photos/id/1045/1400/600" alt="Ayurveda 4">
+                <div class="hero-text">
+                    <h1>Pure & Authentic</h1>
+                    <p>Quality assured, traditionally prepared products.</p>
+                    <a class="btn" href="#products">View Products</a>
+                </div>
+            </div>
+
+            <!-- Slideshow navigation dots -->
+            <div class="dots" id="heroDots"></div>
+        </div>
+    </header>
+
+    <!-- ===== Main Content Container ===== -->
+    <main class="container">
+
+        <!-- ===== Heading and Secondary Slides (under heading) ===== -->
+        <!-- This is smaller slides/card carousel under heading as requested. -->
+        <section class="intro">
+            <!-- Add a big heading for the website -->
+            <h2>Welcome to Tridoshhar Ayurveda</h2>
+            <p class="lead">Traditional wisdom with modern simplicity. Explore our curated products and wellness services.</p>
+
+            <!-- Secondary slides: cards that change automatically -->
+            <div class="card-carousel" id="cardCarousel">
+                <!-- Card 1 -->
+                <div class="card active-card">
+                    <!-- Add your image for card here -->
+                    <img src="image copy.png" alt="Card 1">
+                    <h3>Authentic Herbs</h3>
+                    <p>Quality herbs sourced responsibly.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="image copy 2.png" alt="Card 2">
+                    <h3>Traditional Formulas</h3>
+                    <p>Time-tested formulations for daily health.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="image copy 3.png" alt="Card 3">
+                    <h3>Wellness Support</h3>
+                    <p>Consultations and herbal guidance available.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== About Section ===== -->
+        <!-- Describe company / mission -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <div class="about-grid">
+                <!-- Simple paragraph section for about -->
+                <div class="about-text">
+                    <p>
+                        <!-- Comment: write your about text here -->
+                        Tridoshhar Ayurveda is dedicated to bringing ancient Ayurvedic knowledge to modern life.
+                        We focus on natural ingredients, traditional processing, and transparent quality standards.
+                    </p>
+                    <p>
+                        Our mission is to help people lead healthier lives using safe, natural, and effective remedies.
+                    </p>
+                </div>
+
+                <!-- Simple image - add your about image -->
+                <div class="about-image">
+                    <img src="image copy 4.png" alt="About image">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Services Section ===== -->
+        <!-- List services offered -->
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <!-- Service card: Consultation -->
+                <div class="service-card">
+                    <h3>Ayurvedic Consultation</h3>
+                    <p>Personalized advice to balance your body and mind.</p>
+                </div>
+
+                <!-- Panchakarma (example service) -->
+                <div class="service-card">
+                    <h3>Wellness Plans</h3>
+                    <p>Custom wellness plans, diet & lifestyle guidance.</p>
+                </div>
+
+                <!-- Herbal Remedies -->
+                <div class="service-card">
+                    <h3>Herbal Preparations</h3>
+                    <p>Trusted herbal remedies made traditionally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Products / Shop Section ===== -->
+        <!-- Each product has a WhatsApp Buy button that opens WhatsApp with prefilled message -->
+        <section id="products" class="products-section">
+            <h2>Shop Our Products</h2>
+            <p class="lead">Click Buy to order via WhatsApp. Replace the phone number inside the links with your WhatsApp number.</p>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product">
+                    <!-- Add your product image -->
+                    <img src="muscle.png" alt="Shilajeet">
+                    <h3>muscle vati</h3>
+                    <p>Pure & Natural Energy Booster weight gein upto 7kg.</p>
+                    <!-- WhatsApp Buy Button -->
+                    <!-- Replace 919876543210 with your WhatsApp number (country code + number, no + sign) -->
+                    <a class="buy" href="https://wa.me/919311703705?text=Hello%2C%20I%20would%20like%20to%20buy%20musclevati%20....%20from%203dos%20Ayurveda." target="_blank" rel="noopener">Buy via WhatsApp</a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product">
+                    <img src="lean.png" alt="Immunity Juice">
+                    <h3>WEIGHT LOSE CAPSULES</h3>
+                    <p>Natural Weight lose capsules </p>
+                    <a class="buy" href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20buy%20weight%20lose%20capsule%2060(tablets)%20from%3dos%20Ayurveda." target="_blank" rel="noopener">Buy via WhatsApp</a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product">
+                    <img src="https://picsum.photos/id/1110/500/300" alt="Herbal Skin Care">
+                    <h3>Herbal Skin Care</h3>
+                    <p>Glow formula for healthy skin - 100g.</p>
+                    <a class="buy" href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20buy%20Herbal%20Skin%20Care%20(100g)%20from%20Vaidya%20Ayurveda." target="_blank" rel="noopener">Buy via WhatsApp</a>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product">
+                    <img src="https://picsum.photos/id/1120/500/300" alt="Digestive Aid">
+                    <h3>Digestive Aid</h3>
+                    <p>Herbal digestive support capsules - 60 caps.</p>
+                    <a class="buy" href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20buy%20Digestive%20Aid%20(60%20caps)%20from%20Vaidya%20Ayurveda." target="_blank" rel="noopener">Buy via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Testimonials Section ===== -->
+        <!-- Show what customers say -->
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testi-grid">
+                <blockquote class="testi">
+                    <p>"I felt more energy in two weeks! Highly recommend the Shilajeet."</p>
+                    <cite>- Ritu K.</cite>
+                </blockquote>
+
+                <blockquote class="testi">
+                    <p>"The immunity juice is natural and tasty. Very effective during winter."</p>
+                    <cite>- Aman S.</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ===== FAQ Section ===== -->
+        <section class="faq">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <h4>Are your products natural?</h4>
+                <p>Yes. Ingredients are natural and traditionally processed.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I order?</h4>
+                <p>Click "Buy via WhatsApp" and send the pre-filled message to place your order.</p>
+            </div>
+        </section>
+
+        <!-- ===== Contact Section ===== -->
+        <!-- Simple contact form (no backend). For real emails you'd need a backend or service. -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p class="lead">Ask questions or request a consultation.</p>
+
+            <!-- Simple contact form (demonstration only, not functional without backend) -->
+            <form class="contact-form" onsubmit="contactSubmit(event)">
+                <!-- Comment: Add your name input -->
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+                <!-- Comment: Add your email input -->
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <!-- Comment: Add message box -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+
+                <!-- If you want this to work you can later connect to a backend or use form services -->
+                <button class="btn" type="submit">Send Message</button>
+            </form>
+
+            <!-- Quick WhatsApp contact (one-click) -->
+            <p class="quick-contact">Or message us on WhatsApp directly:
+                <a href="https://wa.me/919876543210?text=Hello%2C%20I%20have%20a%20question%20about%20your%20products." target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Tridoshhar Ayurveda</h3>
+                <p>Natural remedies & wellness guidance.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Phone: +91 8860983932</p>
+                <p>Email: tridoshharyuveda@gmail.com</p>
+            </div>
+        </div>
+        <p class="copyright">© Tridoshhar Ayurveda. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== JavaScript (simple & commented) ===== -->
+    <script>
+        /* ===== Mobile menu toggle (very simple) ===== */
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        /* ===== Smooth scroll for navigation links ===== */
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                // close mobile menu after click
+                navLinks.classList.remove('open');
+            });
+        });
+
+        /* ===== Hero slideshow (auto change) =====
+           Simple and easy to understand:
+           - slides change every 4 seconds
+           - dots show current slide
+        */
+        (function heroSlideshow() {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dotsContainer = document.getElementById('heroDots');
+            let current = 0;
+            // create dots
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                if (idx === 0) dot.classList.add('dot-active');
+                dot.addEventListener('click', () => showSlide(idx));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('dot-active'));
+                slides[index].classList.add('active');
+                dots[index].classList.add('dot-active');
+                current = index;
+            }
+
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+
+            // change every 4 seconds
+            let heroInterval = setInterval(nextSlide, 4000);
+
+            // pause on mouseover (nice UX)
+            document.querySelector('.slideshow').addEventListener('mouseenter', () => clearInterval(heroInterval));
+            document.querySelector('.slideshow').addEventListener('mouseleave', () => heroInterval = setInterval(nextSlide, 4000));
+        })();
+
+        /* ===== Card carousel (under heading) =====
+           Switches active card every 3 seconds.
+        */
+        (function cardCarousel() {
+            const cards = document.querySelectorAll('#cardCarousel .card');
+            let idx = 0;
+            function showCard(i) {
+                cards.forEach(c => c.classList.remove('active-card'));
+                cards[i].classList.add('active-card');
+            }
+            setInterval(() => {
+                idx = (idx + 1) % cards.length;
+                showCard(idx);
+            }, 3000);
+        })();
+
+        /* ===== Contact form submit handler (demo only) ===== */
+        function contactSubmit(e) {
+            e.preventDefault();
+            // Get values (you can later send these to a backend)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // For now we show a friendly alert and clear form
+            alert('Thank you, ' + name + '! We received your message. (Demo form — no server connected.)');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
+
+
