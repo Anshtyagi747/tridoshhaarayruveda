@@ -78,6 +78,13 @@ body {
 .dot { width:10px; height:10px; border-radius:50%; background: rgba(255,255,255,0.5); border:none; cursor:pointer; }
 .dot-active { background: var(--green-dark); }
 
+
+
+blockquote p {
+    color: #2b2c31;
+    font-style: var(--container-width);
+    animation-duration: inherit;
+}
 /* small animation keyframes */
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
 
