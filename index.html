@@ -7,6 +7,7 @@
 
     <!-- Link to external CSS file (keep HTML & CSS separate) -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="shoping.html">
 </head>
 <body>
 
@@ -24,6 +25,7 @@
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#why">why choose us?</a></li>
+                
 
 
                 
@@ -309,7 +311,8 @@
     </footer>
 
     <!-- ===== JavaScript (simple & commented) ===== -->
-    <script>
+    
+       <script>
         /* ===== Mobile menu toggle (very simple) ===== */
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.querySelector('.nav-links');
@@ -320,24 +323,29 @@
         /* ===== Smooth scroll for navigation links ===== */
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
                 const href = link.getAttribute('href');
-                document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-                // close mobile menu after click
+
+                // *** THIS IS THE CRITICAL FIX ***
+                // ONLY run smooth scroll for internal links (starting with #)
+                if (href && href.startsWith('#')) {
+                    e.preventDefault(); // Stop the link from jumping
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+                // For external links like "shoping.html", the code inside the 'if' is skipped,
+                // and the link works normally.
+
+                // Close mobile menu after any link click
                 navLinks.classList.remove('open');
             });
         });
 
-        /* ===== Hero slideshow (auto change) =====
-           Simple and easy to understand:
-           - slides change every 4 seconds
-           - dots show current slide
-        */
+        
         (function heroSlideshow() {
             const slides = document.querySelectorAll('.hero-slide');
+            if (slides.length === 0) return; // Don't run if no slides
             const dotsContainer = document.getElementById('heroDots');
             let current = 0;
-            // create dots
+
             slides.forEach((_, idx) => {
                 const dot = document.createElement('button');
                 dot.classList.add('dot');
@@ -361,19 +369,16 @@
                 showSlide(current);
             }
 
-            // change every 4 seconds
             let heroInterval = setInterval(nextSlide, 4000);
-
-            // pause on mouseover (nice UX)
-            document.querySelector('.slideshow').addEventListener('mouseenter', () => clearInterval(heroInterval));
-            document.querySelector('.slideshow').addEventListener('mouseleave', () => heroInterval = setInterval(nextSlide, 4000));
+            const slideshowElement = document.querySelector('.slideshow');
+            slideshowElement.addEventListener('mouseenter', () => clearInterval(heroInterval));
+            slideshowElement.addEventListener('mouseleave', () => heroInterval = setInterval(nextSlide, 4000));
         })();
 
-        /* ===== Card carousel (under heading) =====
-           Switches active card every 3 seconds.
-        */
+        /* ===== Card carousel (under heading) ===== */
         (function cardCarousel() {
             const cards = document.querySelectorAll('#cardCarousel .card');
+            if (cards.length === 0) return; // Don't run if no cards
             let idx = 0;
             function showCard(i) {
                 cards.forEach(c => c.classList.remove('active-card'));
@@ -388,17 +393,15 @@
         /* ===== Contact form submit handler (demo only) ===== */
         function contactSubmit(e) {
             e.preventDefault();
-            // Get values (you can later send these to a backend)
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // For now we show a friendly alert and clear form
             alert('Thank you, ' + name + '! We received your message. (Demo form — no server connected.)');
             e.target.reset();
         }
-    </script>
+
+    </script>  
+   
 </body>
 </html>
+
 
 
