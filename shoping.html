@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- [TASK] Meta information and external resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tridoshhar Ayurveda - Natural Wellness</title>
+    <!-- [TASK] Tailwind CSS for rapid UI development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- [TASK] Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- [TASK] Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- [TASK] Custom CSS for advanced styling and animations -->
+    <style>
+        /* [TASK] Define custom properties for a consistent and easily maintainable theme */
+        :root {
+            --bg-color: #fdfaf6;
+            --text-color: #3a3a3a;
+            --primary-color: #008080; /* Teal */
+            --secondary-color: #d4af37; /* Gold */
+            --card-bg: #ffffff;
+        }
+
+        /* [TASK] Apply base styles to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* [TASK] Style headings with an elegant serif font */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* [TASK] Hero section background image and overlay */
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544829393-2c4787d5a5a7?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* [TASK] Product card styling and hover effects */
+        .product-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            opacity: 0; /* Initially hidden for animation */
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .product-image-container {
+            overflow: hidden;
+        }
+        .product-card .product-image {
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        /* [TASK] Animated gradient for the 'Buy' button */
+        .buy-button {
+            position: relative;
+            background: linear-gradient(90deg, var(--primary-color), #00a0a0);
+            background-size: 200% 100%;
+            transition: background-position 0.5s ease;
+        }
+
+        .buy-button:hover {
+            background-position: 100% 0;
+        }
+        
+        /* [TASK] Page load animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .slide-in-left {
+             animation: slideInLeft 1s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- [TASK] Header Section -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 fade-in">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-[var(--primary-color)]">Tridoshhar Ayurveda</h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-[var(--primary-color)] transition-colors duration-300">Home</a>
+                <a href="#" class="text-gray-600 hover:text-[var(--primary-color)] transition-colors duration-300">Our Products</a>
+                <a href="#" class="text-gray-600 hover:text-[var(--primary-color)] transition-colors duration-300">About Us</a>
+                <a href="#" class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-full hover:opacity-90 transition-opacity duration-300">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- [TASK] Main Content Area -->
+    <main>
+        <!-- [TASK] Hero Section for initial user engagement -->
+        <section class="hero-section text-white h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl md:text-7xl font-bold mb-4 slide-in-left">ayruvedic herbal medicines </h2>
+                <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.5s;">all natural with no side effects</p>
+                <a href="#product-grid" class="bg-white text-[var(--primary-color)] font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 fade-in" style="animation-delay: 1s;">Explore Products</a>
+            </div>
+        </section>
+
+        <!-- [TASK] Product Grid Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-900">Featured Products</h2>
+                    <div class="w-24 h-1 bg-[var(--secondary-color)] mx-auto mt-4"></div>
+                </div>
+
+                <!-- [TASK] Grid container for product cards -->
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Products will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- [TASK] Footer Section -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-10">
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                 <div>
+                     <h3 class="text-2xl font-bold text-[var(--primary-color)] mb-2">Tridoshhar Ayurveda</h3>
+                     <p class="text-gray-400">Authentic remedies for a balanced life.</p>
+                 </div>
+                 <div>
+                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                     <ul>
+                         <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white mt-2 block">Shipping & Returns</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white mt-2 block">FAQ</a></li>
+                     </ul>
+                 </div>
+                 <div>
+                     <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                     <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-pinterest"></i></a>
+                     </div>
+                 </div>
+             </div>
+             <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Tridoshhar Ayurveda. All Rights Reserved.</p>
+             </div>
+        </div>
+    </footer>
+
+    <!-- [TASK] JavaScript for dynamic content and interactivity -->
+    <script>
+        // [TASK] Product data array. Easy to add or remove items.
+        const products = [
+            { id: 1, name: 'Ashwagandha Root Powder', price: '₹499', image: 'image copy 6.png' },
+            { id: 2, name: 'Triphala Churna Digestion Aid', price: '₹349', image: 'image copy 7.png' },
+            { id: 3, name: 'Brahmi Oil for Hair & Mind', price: '₹799', image: 'image copy 8.png' },
+            { id: 4, name: 'Herbal Chyawanprash Immunity Booster', price: '₹999', image: 'image copy 9.png' },
+            { id: 5, name: 'Turmeric Curcumin Capsules', price: '₹649', image: 'image copy 10.png' },
+            //{ id: 6, name: 'Neem & Tulsi Face Wash', price: '₹299', image: 'https://placehold.co/400x400/86efac/333?text=Face+Wash' },
+            //{ id: 7, name: 'Soothing Vata Massage Oil', price: '₹899', image: 'https://placehold.co/400x400/f9a8d4/333?text=Massage+Oil' },
+            //{ id: 8, name: 'Organic Moringa Powder', price: '₹449', image: 'https://placehold.co/400x400/bbf7d0/333?text=Moringa' },
+           // { id: 9, name: 'Ayurvedic Herbal Tea Blend', price: '₹399', image: 'https://placehold.co/400x400/fde047/333?text=Herbal+Tea' },
+           // { id: 10, name: 'Pure Shilajit Resin', price: '₹1,999', image: 'https://placehold.co/400x400/a8a29e/333?text=Shilajit' }
+        ];
+
+        // [TASK] Function to handle WhatsApp messaging
+        function buyOnWhatsApp(productName, productPrice) {
+            // IMPORTANT: Replace '911234567890' with your actual phone number including the country code (e.g., 91 for India)
+            const yourPhoneNumber = '911234567890'; 
+
+            // [TASK] Create a pre-filled message for the user
+            const message = `Hello Tridoshhar Ayurveda! I'm interested in buying the *${productName}* for *${productPrice}*. Please let me know the next steps.`;
+            
+            // [TASK] Encode the message to be URL-safe
+            const encodedMessage = encodeURIComponent(message);
+            
+            // [TASK] Construct the final WhatsApp URL
+            const whatsappURL = `https://wa.me/${yourPhoneNumber}?text=${encodedMessage}`;
+            
+            // [TASK] Open the URL in a new browser tab
+            window.open(whatsappURL, '_blank');
+        }
+
+        // [TASK] This function runs after the HTML document is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const productGrid = document.getElementById('product-grid');
+            if (!productGrid) return;
+
+            // [TASK] Loop through the products array and create a card for each one
+            products.forEach((product, index) => {
+                const card = document.createElement('div');
+                card.className = 'product-card bg-[var(--card-bg)] rounded-lg shadow-md overflow-hidden';
+                // [TASK] Stagger the animation delay for a cascading effect
+                card.style.animation = `fadeIn 1s ease-out ${0.3 + index * 0.1}s forwards`;
+
+                // [TASK] Use template literals to create the HTML for the product card
+                card.innerHTML = `
+                    <div class="relative product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover product-image">
+                        <div class="absolute top-0 left-0 bg-[var(--secondary-color)] text-white px-3 py-1 m-2 rounded-full text-sm font-semibold">BEST SELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 truncate">${product.name}</h3>
+                        <p class="text-[var(--primary-color)] text-2xl font-bold mb-4">${product.price}</p>
+                        <button 
+                            onclick="buyOnWhatsApp('${product.name}', '${product.price}')"
+                            class="buy-button w-full text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline flex items-center justify-center space-x-2"
+                        >
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Buy on WhatsApp</span>
+                        </button>
+                    </div>
+                `;
+                // [TASK] Add the newly created card to the product grid
+                productGrid.appendChild(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
